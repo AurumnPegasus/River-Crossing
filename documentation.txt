@@ -1,0 +1,8 @@
+This game is designed as a 2 player game where the first player is given the icon of Spiderman and the second one is given the icon 
+of Deadpool
+The objective of the game is to cross the river and all the obstacles in minimum time possible
+There are at max four rounds and whoever completes the fourth round first wins the game 
+In the case both completing the rounds in the same amount of tries, then the criteria to judge the winner depends on the time taken by either to complete the challenge
+
+The first player moves using the Arrow keys, whereas the second player moves using the wasd keys
+This is a very simple game and I hope you enjoy it
