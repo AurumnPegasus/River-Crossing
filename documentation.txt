@@ -4,5 +4,7 @@ The objective of the game is to cross the river and all the obstacles in minimum
 There are at max four rounds and whoever completes the fourth round first wins the game 
 In the case both completing the rounds in the same amount of tries, then the criteria to judge the winner depends on the time taken by either to complete the challenge
 
+For crossing a moving object a player gains 10 points whereas for crossing a static object a player gains 5 points
+
 The first player moves using the Arrow keys, whereas the second player moves using the wasd keys
 This is a very simple game and I hope you enjoy it

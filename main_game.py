@@ -1,61 +1,62 @@
 import pygame
-import os
-import time
+import configparser
+
+cf = configparser.RawConfigParser()
+config_file = 'colour_config.cfg'
+cf.read(config_file)
 
 pygame.init()
 clock = pygame.time.Clock()
-done = False
-blue = (0, 0, 200)
-brown = (100, 40, 0)
 screen = pygame.display.set_mode((1080, 760))
 pygame.font.init()
 myfont = pygame.font.SysFont('Comic Sans MS', 30)
 
-
-x_player = 500
-y_player = 730
-x_change_player = 0
-y_change_player = 0
-level_player_one = 1
-level_player_two = 1
-total_score_one = 0
-total_score_two = 0
-time_one = 0
-time_two = 0
-enemy_one_x = 0
-enemy_one_y = 650
-enemy_five_x = 0
-enemy_five_y = 40
-enemy_two_x = 0
-enemy_two_y = 530
-enemy_four_x = 0
-enemy_four_y = 230
-enemy_two_x_b = 980
-enemy_two_y_b = 450
-enemy_four_x_b = 980
-enemy_four_y_b = 150
-enemy_three_x = 0
-enemy_three_y = 340
+done = False
+x_player = int(cf.get("variables", "x_player"))
+y_player = int(cf.get("variables", "y_player"))
+x_change_player = int(cf.get("variables", "x_change_player"))
+y_change_player = int(cf.get("variables", "y_change_player"))
+level_player_one = int(cf.get("variables", "level_player_one"))
+level_player_two = int(cf.get("variables", "level_player_two"))
+total_score_one = int(cf.get("variables", "total_score_one"))
+total_score_two = int(cf.get("variables", "total_score_two"))
+time_one = int(cf.get("variables", "time_one"))
+time_two = int(cf.get("variables", "time_two"))
+enemy_one_x = int(cf.get("variables", "enemy_one_x"))
+enemy_one_y = int(cf.get("variables", "enemy_one_y"))
+enemy_two_x = int(cf.get("variables", "enemy_two_x"))
+enemy_two_y = int(cf.get("variables", "enemy_two_y"))
+enemy_two_x_b = int(cf.get("variables", "enemy_two_x_b"))
+enemy_two_y_b = int(cf.get("variables", "enemy_two_y_b"))
+enemy_four_x_b = int(cf.get("variables", "enemy_four_x_b"))
+enemy_four_y_b = int(cf.get("variables", "enemy_four_y_b"))
+enemy_four_x = int(cf.get("variables", "enemy_four_x"))
+enemy_four_y = int(cf.get("variables", "enemy_four_y"))
+enemy_five_x = int(cf.get("variables", "enemy_five_x"))
+enemy_five_y = int(cf.get("variables", "enemy_five_y"))
+enemy_three_x = int(cf.get("variables", "enemy_three_x"))
+enemy_three_y = int(cf.get("variables", "enemy_three_y"))
 first_time_ship_one = True
 first_time_ship_two = True
 first_time_ship_two_b = True
 first_time_ship_three = True
-change_enemy_one = 1
-change_enemy_two = 1.5
-change_enemy_two_b = 1.5
-change_enemy_three = 2
-score_player_one = 0
-max_player_one = 760
-threshold_player_one = 760
+change_enemy_one = float(cf.get("variables", "change_enemy_one"))
+change_enemy_two = float(cf.get("variables", "change_enemy_two"))
+change_enemy_two_b = float(cf.get("variables", "change_enemy_two_b"))
+change_enemy_three = float(cf.get("variables", "change_enemy_three"))
+max_player_one = int(cf.get("variables", "max_player_one"))
+threshold_player_one = int(cf.get("variables", "threshold_player_one"))
 playerone = True
 exit_kar = False
 for_score = [False, False, False, False, False, False, False, False, False,
              False, False, False, False, False]
 pillar_position = [(200, 700), (370, 590), (650, 590), (500, 390),
                    (220, 390), (900, 280), (400, 280), (750, 90), (400, 90), (550, 0)]
+blue = bytes.fromhex(cf.get("colours", "blue"))
+brown = bytes.fromhex(cf.get("colours", "brown"))
 
 
-class Enemies():
+class Enemies:
 
     def __init__(self, image_local, level, x_start, y_start):
         self.image_local = image_local
@@ -67,7 +68,7 @@ class Enemies():
         screen.blit(self.image_local, (self.x_start, self.y_start))
 
 
-class Player():
+class Player:
 
     def __init__(self, x, y, image_local):
         self.x = x
@@ -78,9 +79,18 @@ class Player():
         screen.blit(self.image_local, (self.x, self.y))
 
 
+def make_land():
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 0, 1080, 40))
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 605, 1080, 40))
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 405, 1080, 40))
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 305, 1080, 40))
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 105, 1080, 40))
+    pygame.draw.rect(screen, brown, pygame.Rect(0, 720, 1080, 40))
+
+
 def keep_score_one(y):
     if y < globals()['max_player_one'] and y < globals()[
-            'threshold_player_one']:
+        'threshold_player_one']:
         globals()['max_player_one'] = y
         if y >= 730:
             for_score[0] = True
@@ -138,7 +148,7 @@ def keep_score_one(y):
 
 def keep_score_two(y):
     if y > globals()['max_player_one'] and y > globals()[
-            'threshold_player_one']:
+        'threshold_player_one']:
         globals()['max_player_one'] = y
         if y < 10:
             for_score[0] = True
@@ -194,25 +204,8 @@ def keep_score_two(y):
     return 0
 
 
-def make_land():
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 0, 1080, 40))
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 605, 1080, 40))
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 405, 1080, 40))
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 305, 1080, 40))
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 105, 1080, 40))
-    pygame.draw.rect(screen, brown, pygame.Rect(0, 720, 1080, 40))
-
-
-_image_library = {}
-
-
 def get_image(path):
-    global _image_library
     image = pygame.image.load(path)
-    if image is None:
-        canonicalized_path = path.replace('/', os.sep).replace('', os.sep)
-        image = pygame.image.load(canonicalized_path)
-        _image_library[path] = image
     return image
 
 
@@ -243,7 +236,6 @@ while not exit_kar:
         score_player_one = 0
         globals()['max_player_one'] = 760
         globals()['threshold_player_one'] = 760
-        globals()['score_player_one'] = 0
         x_player = 500
         y_player = 730
         x_change_player = 0
@@ -255,6 +247,7 @@ while not exit_kar:
                     exit_kar = True
                     playerone = True
                     globals()['level_player_one'] += 1
+                    print("in first quit")
                     globals()['total_score_one'] += score_player_one
                     globals()['time_one'] += seconds_player_one
                 if event.type == pygame.KEYDOWN:
@@ -294,9 +287,10 @@ while not exit_kar:
             make_land()
             player_one = Player(x_player, y_player, spiderman_image)
             player_one.initialise()
-            globals()['score_player_one'] += keep_score_one(y_player)
+            score_player_one += keep_score_one(y_player)
+            # print(score_player_one)
             textsurface = myfont.render(
-                'Score is ' + str(globals()['score_player_one']), False, (255, 255, 255))
+                'Score is ' + str(score_player_one), False, (255, 255, 255))
             screen.blit(textsurface, (0, 0))
             seconds_player_one = (pygame.time.get_ticks() - start_ticks) / 1000
             textsurface = myfont.render('Time ' + str(seconds_player_one),
@@ -305,8 +299,6 @@ while not exit_kar:
             if score_player_one == 120:
                 playerone = False
                 done = True
-                globals()['total_score_one'] += score_player_one
-                globals()['time_one'] += seconds_player_one
                 globals()['level_player_one'] += 1
                 continue
 
@@ -419,19 +411,21 @@ while not exit_kar:
                 if event.type == pygame.KEYDOWN:
                     done = True
                     playerone = False
+                    print("I am here keydown")
                     globals()['total_score_one'] += score_player_one
                     globals()['time_one'] += seconds_player_one
                 if event.type == pygame.QUIT:
                     done = True
                     exit_kar = True
                     playerone = True
+                    print("I am here quit 2")
                     globals()['total_score_one'] += score_player_one
                     globals()['time_one'] += seconds_player_one
             screen.fill((0, 0, 0))
             textsurface = myfont.render(
                 'Press any key to continue Deadpool', False, (255, 0, 0))
             screen.blit(textsurface, (500, 300))
-            score = myfont.render('Score is ' + str(globals()['score_player_one']),
+            score = myfont.render('Score is ' + str(score_player_one),
                                   False, (255, 0, 0))
             screen.blit(score, (300, 500))
             time_taken = myfont.render('Time ' + str(seconds_player_one),
@@ -450,7 +444,6 @@ while not exit_kar:
         score_player_one = 0
         x_change_player = 0
         y_change_player = 0
-        globals()['score_player_one'] = 0
         globals()['max_player_one'] = 0
         globals()['threshold_player_one'] = 0
         while not done:
@@ -512,8 +505,6 @@ while not exit_kar:
             if score_player_one == 120:
                 playerone = False
                 done = True
-                globals()['total_score_two'] += score_player_one
-                globals()['time_two'] += seconds_player_one
                 globals()['level_player_two'] += 1
                 continue
 
