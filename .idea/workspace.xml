@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbe736ec-e12f-481c-a630-ca8148af3899" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/colour_config.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +39,7 @@
       <workItem from="1581966398366" duration="113000" />
       <workItem from="1582025759732" duration="1557000" />
       <workItem from="1582027329444" duration="5336000" />
+      <workItem from="1582032852128" duration="174000" />
     </task>
     <servers />
   </component>
@@ -51,9 +47,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="649" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1582027331923">
+    <state x="242" y="128" width="1482" height="873" key="MergeDialog" timestamp="1582033020650">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="649" y="384" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582027331923" />
+    <state x="242" y="128" width="1482" height="873" key="MergeDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582033020650" />
+    <state x="698" y="275" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1582033020653">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="698" y="275" width="580" height="571" key="MultipleFileMergeDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582033020653" />
+    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582032993912">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1582032993912" />
+    <state x="649" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1582032851859">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="649" y="384" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582032851859" />
+    <state x="699" y="350" width="578" height="420" key="git4idea.merge.GitMergeDialog" timestamp="1582032898615">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="699" y="350" width="578" height="420" key="git4idea.merge.GitMergeDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582032898615" />
   </component>
 </project>
