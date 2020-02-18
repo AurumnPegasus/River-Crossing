@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbe736ec-e12f-481c-a630-ca8148af3899" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colour_config.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/colour_config.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,6 +58,7 @@
       <workItem from="1582025759732" duration="1557000" />
       <workItem from="1582027329444" duration="5336000" />
       <workItem from="1582032852128" duration="174000" />
+      <workItem from="1582033131422" duration="396000" />
     </task>
     <servers />
   </component>
@@ -55,14 +74,18 @@
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="698" y="275" width="580" height="571" key="MultipleFileMergeDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582033020653" />
-    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582032993912">
+    <state x="482" y="192" width="1022" height="737" key="SettingsEditor" timestamp="1582033515566">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1582032993912" />
-    <state x="649" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1582032851859">
+    <state x="482" y="192" width="1022" height="737" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1582033515566" />
+    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582033433790">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="649" y="384" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582032851859" />
+    <state x="588" y="293" width="800" height="535" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1582033433790" />
+    <state x="649" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1582033130760">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="649" y="384" key="com.intellij.ide.util.TipDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1582033130760" />
     <state x="699" y="350" width="578" height="420" key="git4idea.merge.GitMergeDialog" timestamp="1582032898615">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>

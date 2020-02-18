@@ -54,6 +54,8 @@ pillar_position = [(200, 700), (370, 590), (650, 590), (500, 390),
                    (220, 390), (900, 280), (400, 280), (750, 90), (400, 90), (550, 0)]
 blue = bytes.fromhex(cf.get("colours", "blue"))
 brown = bytes.fromhex(cf.get("colours", "brown"))
+deadpool = cf.get("messages", "deadpool")
+spiderman = cf.get("messages", "spiderman")
 
 
 class Enemies:
@@ -190,7 +192,7 @@ def keep_score_two(y):
             for_score[9] = True
             globals()['threshold_player_one'] = 570
             return 10
-        elif y < 620 and globals()['threshold_player_one'] + 40 < y and for_score[9]:
+        elif 620 > y > globals()['threshold_player_one'] + 40 and for_score[9]:
             for_score[10] = True
             globals()['threshold_player_one'] = 620
             return 10
@@ -423,7 +425,7 @@ while not exit_kar:
                     globals()['time_one'] += seconds_player_one
             screen.fill((0, 0, 0))
             textsurface = myfont.render(
-                'Press any key to continue Deadpool', False, (255, 0, 0))
+                deadpool, False, (255, 0, 0))
             screen.blit(textsurface, (500, 300))
             score = myfont.render('Score is ' + str(score_player_one),
                                   False, (255, 0, 0))
@@ -626,7 +628,7 @@ while not exit_kar:
                     globals()['total_score_two'] += score_player_one
                     globals()['time_two'] += seconds_player_one
             screen.fill((0, 0, 0))
-            textsurface = myfont.render('Press any key to continue Spiderman',
+            textsurface = myfont.render(spiderman,
                                         False, (255, 0, 0))
             screen.blit(textsurface, (500, 300))
             score = myfont.render('Score is ' + str(score_player_one),
