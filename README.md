@@ -1,4 +1,4 @@
-This game is a two player basic PyCharm game made during my ISS course
+This game is a two player basic PyGame game made during my ISS course
 
  
 The aim of the game is to cross the river avoiding the obstacles in the minimum time 
